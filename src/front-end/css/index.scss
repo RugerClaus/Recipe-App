@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: helvetica;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 body {
@@ -12,6 +14,18 @@ body {
     align-items: center;
     height: 100vh;
 
+    #navMenu {
+        display: none;
+        height: 90vh;
+        width: 20vw;
+        background-color: gray;
+        border: 2px solid black;
+        position: absolute;
+        right: 0px;
+        top: auto;
+        bottom: 40px;
+    }
+
     .header {
         width: 100%;
         height: fit-content;
@@ -19,14 +33,15 @@ body {
         top: 0;
         display: grid;
         grid-template-columns: repeat(9,1fr);
-        grid-template-rows: none;
+        grid-template-rows: repeat(1,1fr);
         align-items: center;
         justify-content: space-around;
 
         #banner {
-            font-size: 3rem;
+            font-size: 4rem;
             grid-column: 1;
-            grid-row: span 2;
+            grid-row: span 3;
+            box-shadow: black 5px 5px 5px 5px ;
         }
         #facebook {
             width: 50px;
@@ -37,6 +52,7 @@ body {
             background-size: 50px 50px;
             background-position: center;
             color: black;
+            justify-self: center;
         }
         #instagram {
             width: 50px;
@@ -47,6 +63,7 @@ body {
             background-size: contain;
             background-position: center;
             color: black;
+            justify-self: center;
         }
         #navigation {
             width: 50px;
@@ -58,7 +75,18 @@ body {
             background-origin: border-box;
             background-repeat: no-repeat;
             color: black;
+            justify-self: center;
         }
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 85vh;
+        width: 100vw;
+        position: absolute;
+        bottom: 1.5rem;
     }
 
     .footer {

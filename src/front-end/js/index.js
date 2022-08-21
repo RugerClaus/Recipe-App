@@ -59,6 +59,13 @@ const header = () => {
     }
     const menu = () => {
         const menuButton = document.getElementById('navigation')
+        const navigation = document.getElementById('navMenu')
+        menuButton.addEventListener('mouseover', () => {
+            navigation.style.display = "block"
+        })
+        navigation.addEventListener('mouseout', () => {
+            navigation.style.display = 'none'
+        })
     }
     menu()
 }
