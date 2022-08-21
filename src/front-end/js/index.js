@@ -57,6 +57,14 @@ const header = () => {
             colors.saturday()
             break
     }
+    const menu = () => {
+        const menuButton = document.getElementById('navigation')
+    }
+    menu()
+}
+
+const content = () => {
+    
 }
 
 const footer = () => {
@@ -68,4 +76,5 @@ const footer = () => {
 
 
 header()
+content()
 footer()
