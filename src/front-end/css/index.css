@@ -16,14 +16,15 @@ body {
 }
 body #navMenu {
   display: none;
-  height: 90vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 20vw;
   background-color: gray;
   border: 2px solid black;
   position: absolute;
   right: 0px;
-  top: auto;
-  bottom: 40px;
+  top: 5rem;
 }
 body .header {
   width: 100%;

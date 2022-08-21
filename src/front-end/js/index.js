@@ -63,7 +63,7 @@ const header = () => {
         menuButton.addEventListener('mouseover', () => {
             navigation.style.display = "block"
         })
-        navigation.addEventListener('mouseout', () => {
+        document.querySelector('.content').addEventListener('mouseover', () => {
             navigation.style.display = 'none'
         })
     }
@@ -78,9 +78,6 @@ const footer = () => {
     const footer = document.getElementById('footer')
     footer.innerHTML = `Copyright &copy; Recipays ${today.getFullYear()}`
 }
-
-
-
 
 header()
 content()
