@@ -95,4 +95,11 @@ body .footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: xx-large;
+}
+
+@media (max-width: 400px) {
+  * {
+    font-size: 5rem;
+  }
 }/*# sourceMappingURL=index.css.map */
