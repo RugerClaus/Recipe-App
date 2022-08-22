@@ -110,23 +110,38 @@ const content = () => {
         e.preventDefault()
         const category = document.getElementById('category').value
         const name = document.getElementById('name').value
-        const amount = document.getElementById('amount').value
-        const ingredientsAmount = document.getElementById('ingredientsAmount').value
+        const ingredientAmount = document.getElementById('amount').value
+        const ingredientsUnit = document.getElementById('ingredientsUnit').value
 
-        console.log(category, name, amount, ingredientsAmount)
+        console.log(category, name, ingredientAmount, ingredientsUnit)
 
         const newRecipe = {
             category: category,
             name: name,
-            amount: amount,
-            ingredientsAmount: ingredientsAmount
+            ingredientAmount: ingredientAmount,
+            ingredientsUnit: ingredientsUnit
         }
         listOfRecipes.push(newRecipe)
 
-        document.getElementById("currentList").innerHTML = JSON.stringify(listOfRecipes)
-        
+        //document.getElementById("currentList").innerHTML = JSON.stringify(listOfRecipes)
+
+        appendIngredient(newRecipe)
     })
 
+    function appendIngredient(recipe) {
+        let lineBreak = document.createElement("br")
+        let listEntry = document.createElement("li")
+            .appendChild(document.createElement("ul"))
+        listEntry.appendChild(document.createElement("li"))
+            .appendChild(document.createTextNode("Category: " + recipe.category))
+        listEntry.appendChild(document.createElement("li"))
+            .appendChild(document.createTextNode("Name: " + recipe.name))
+        listEntry.appendChild(document.createElement("li"))
+            .appendChild(document.createTextNode("Ingredients: " + recipe.ingredientAmount + " " + recipe.ingredientsUnit))
+        listEntry.appendChild(document.createElement("li"))
+            .appendChild(document.createTextNode("--------------------------------"))
+        document.getElementById("dynamicIngredientList").appendChild(listEntry)
+    }
 }
 
 const footer = () => {

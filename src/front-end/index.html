@@ -54,7 +54,6 @@
         <form id="newRecipeForm" class="newRecipeForm" method="post">
           <input id="category" type="text" placeholder="Category" required />
           <input id="name" type="text" placeholder="Name" required />
-          <h2>Ingredients</h2>
           <div class="ingredientsForm">
             <input id="amount" type="text" required />
             <select name="amount" id="ingredientsAmount" required>
@@ -64,17 +63,20 @@
           </div>
           <button type="submit">New Item</button>
         </form>
+        <h2>Ingredients</h2>
+        <ul id="dynamicIngredientList">
+        </ul>
 
         <div id="currentList"></div>
       </section>
-      <div id="categories">
+      <section id="categories">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium,
         labore quidem repudiandae molestias adipisci magni optio animi
         voluptates quibusdam eveniet error corrupti ducimus alias dolores iure
         ad! Quis, veniam ducimus excepturi doloremque, tenetur omnis delectus
         voluptatibus reiciendis ipsum rem asperiores ab assumenda voluptas vel!
         Obcaecati minus sequi repellat impedit facilis!
-      </div>
+      </section>
     </main>
     <footer class="footer">
       <p id="footer"></p>
