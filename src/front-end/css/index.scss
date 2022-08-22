@@ -1,3 +1,7 @@
+@import "newRecipe/newRecipe.css";
+@import "home/home.css";
+@import "categories/categories.css";
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -93,31 +97,6 @@ body {
         width: 100vw;
         position: absolute;
         bottom: 1.5rem;
-
-        #home {
-            display: block;
-            width: 80%;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            justify-self: center;
-        }
-        #newRecipe {
-            display: none;
-            width: 80%;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            justify-self: center;
-        }
-        #categories {
-            display: none;
-            width: 80%;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            justify-self: center;
-        }
     }
 
     .footer {
@@ -129,11 +108,5 @@ body {
         justify-content: center;
         align-items: center;
         font-size: xx-large;
-    }
-}
-
-@media(max-width: 400px){
-    * {
-        font-size: 5rem;
     }
 }

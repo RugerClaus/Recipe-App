@@ -83,7 +83,7 @@ const header = () => {
                     categories.style.display = 'none'
                 }
                 else if (button == newRecipeButton){
-                    newRecipe.style.display = 'block'
+                    newRecipe.style.display = 'grid'
                     home.style.display = 'none'
                     categories.style.display = 'none'
                 }
