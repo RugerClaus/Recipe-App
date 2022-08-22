@@ -2,6 +2,7 @@ const today = new Date()
 const home = document.getElementById('home')
 const newRecipe = document.getElementById('newRecipe')
 const categories = document.getElementById('categories')
+const listOfRecipes = []
 
 
 const header = () => {
@@ -105,25 +106,27 @@ const content = () => {
         newRecipe.style.display = 'none'
         categories.style.display = 'none'
     }
-    const addToRecipe = () => {
-        const newRecipeForm = document.querySelector('.newRecipeForm')
-        const ingredientsForm = document.getElementById('ingredientsForm')
-
-    }
-    const newItem = document.getElementById('newItem')
-    newItem.addEventListener('click', (e) => {
+    document.getElementById("newRecipeForm").addEventListener('submit', (e) => {
         e.preventDefault()
-        
-        const input = document.createElement('input')
-        const select = document.createElement('select')
-        const button = document.createElement('button')
-        const ingredientsForm = document.getElementById('ingredientsForm')
+        const category = document.getElementById('category').value
+        const name = document.getElementById('name').value
+        const amount = document.getElementById('amount').value
+        const ingredientsAmount = document.getElementById('ingredientsAmount').value
 
-        let newItem = []
-        newItem.push([input,select,button])
-        ingredientsForm.append(newItem)
-        console.log(newItem)
+        console.log(category, name, amount, ingredientsAmount)
+
+        const newRecipe = {
+            category: category,
+            name: name,
+            amount: amount,
+            ingredientsAmount: ingredientsAmount
+        }
+        listOfRecipes.push(newRecipe)
+
+        document.getElementById("currentList").innerHTML = JSON.stringify(listOfRecipes)
+        
     })
+
 }
 
 const footer = () => {
