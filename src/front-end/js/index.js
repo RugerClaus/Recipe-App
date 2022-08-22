@@ -133,12 +133,11 @@ const content = () => {
         const listEntry = document.createElement("li")
             .appendChild(document.createElement("ul"))
         listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode("Category: " + recipe.category))
-            document.createElement('br')
+            .appendChild(document.createTextNode(`Category: ${recipe.category}`)) // implemented template literals to clean up the code a bit
         listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode("Name: " + recipe.name))
+            .appendChild(document.createTextNode(`Name: ${recipe.name}`)) // implemented template literals to clean up the code a bit
         listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode("Ingredients: " + recipe.ingredientAmount + " " + recipe.ingredientsUnit))
+            .appendChild(document.createTextNode(`Ingredients: ${recipe.ingredientAmount} ${recipe.ingredientsUnit}`)) // implemented template literals to clean up the code a bit
         listEntry.appendChild(document.createElement("li"))
             .appendChild(document.createTextNode("--------------------------------"))
         document.getElementById("dynamicIngredientList").appendChild(listEntry)
