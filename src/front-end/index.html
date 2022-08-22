@@ -1,63 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="A free and open source endeavour">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/mobile.css">
-        <link rel="stylesheet" href="css/newRecipe/newRecipe.css">
-        <title>Recipe App</title>
-    </head>
-    <body>
-        <div id="navMenu">
-            <ul>
-                <li class="button" id="homeButton">
-                    Home
-                </li>
-                <li class="button" id="newRecipeButton">
-                    New Recipe
-                </li>
-                <li class="button" id="categoriesButton">
-                    Categories
-                </li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="A free and open source endeavour" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/newRecipe/newRecipe.css" />
+    <title>Recipe App</title>
+  </head>
+  <body>
+    <div id="navMenu">
+      <ul>
+        <li class="button" id="homeButton">Home</li>
+        <li class="button" id="newRecipeButton">New Recipe</li>
+        <li class="button" id="categoriesButton">Categories</li>
+      </ul>
+    </div>
+    <div class="header">
+      <span id="banner">Recipayyys</span>
+      <span id="navigation"></span>
+      <span id="facebook"></span>
+      <span id="instagram"></span>
+    </div>
+    <div class="content">
+      <div id="home">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas odio,
+        eius perspiciatis impedit pariatur, quasi atque obcaecati nostrum enim
+        cum natus, mollitia architecto voluptatibus eaque eligendi doloribus
+        nesciunt dolorum quis repellat accusamus. Placeat magnam facilis, iste
+        vel ab accusamus quaerat obcaecati aspernatur modi molestias numquam
+        odio, doloribus maxime totam minus dolore! Velit cupiditate natus
+        accusamus? Amet libero dolorum quam repellat, repudiandae fuga
+        aspernatur minus doloribus in asperiores natus possimus id enim voluptas
+        nemo odio labore, assumenda recusandae numquam error. Nobis sapiente sit
+        fugit culpa tempore velit, molestias eveniet porro ullam architecto
+        beatae distinctio recusandae a soluta asperiores pariatur, repudiandae
+        quis. Fugit nulla ut laboriosam sint repellat natus placeat
+        exercitationem eius tempora, nisi iste cumque impedit quisquam. Sed quis
+        voluptas rerum minima quam consectetur ex quaerat, animi maxime odio!
+        Blanditiis quisquam distinctio totam recusandae eaque nemo voluptatum
+        obcaecati exercitationem expedita laborum! Fugiat modi doloremque
+        corporis iste nam ut repellendus ducimus necessitatibus, rem id nihil!
+        Incidunt itaque aperiam officiis, voluptas numquam suscipit! Possimus
+        saepe quia et mollitia dolores labore, atque odit facere tenetur dicta
+        sint qui, quisquam tempora ex nam illum dignissimos? Culpa inventore
+        quasi a in pariatur id natus, aspernatur qui excepturi! Reprehenderit
+        harum dolor odit in labore eligendi sint tempora!
+      </div>
+      <div id="newRecipe">
+        <div id="newRecipeHeader">
+          <h1>New Recipe</h1>
         </div>
-        <div class="header">
-            <span id="banner">Recipayyys</span>
-            <span id="navigation"></span>
-            <span id="facebook"></span>
-            <span id="instagram"></span>
-        </div>
-        <div class="content">
-            <div id="home">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas odio, eius perspiciatis impedit pariatur, quasi atque obcaecati nostrum enim cum natus, mollitia architecto voluptatibus eaque eligendi doloribus nesciunt dolorum quis repellat accusamus. Placeat magnam facilis, iste vel ab accusamus quaerat obcaecati aspernatur modi molestias numquam odio, doloribus maxime totam minus dolore! Velit cupiditate natus accusamus? Amet libero dolorum quam repellat, repudiandae fuga aspernatur minus doloribus in asperiores natus possimus id enim voluptas nemo odio labore, assumenda recusandae numquam error. Nobis sapiente sit fugit culpa tempore velit, molestias eveniet porro ullam architecto beatae distinctio recusandae a soluta asperiores pariatur, repudiandae quis. Fugit nulla ut laboriosam sint repellat natus placeat exercitationem eius tempora, nisi iste cumque impedit quisquam. Sed quis voluptas rerum minima quam consectetur ex quaerat, animi maxime odio! Blanditiis quisquam distinctio totam recusandae eaque nemo voluptatum obcaecati exercitationem expedita laborum! Fugiat modi doloremque corporis iste nam ut repellendus ducimus necessitatibus, rem id nihil! Incidunt itaque aperiam officiis, voluptas numquam suscipit! Possimus saepe quia et mollitia dolores labore, atque odit facere tenetur dicta sint qui, quisquam tempora ex nam illum dignissimos? Culpa inventore quasi a in pariatur id natus, aspernatur qui excepturi! Reprehenderit harum dolor odit in labore eligendi sint tempora!
-            </div>
-            <div id="newRecipe">
-                <div id="newRecipeHeader">
-                    <h1>New Recipe</h1>
-                </div>
-                <form action="" class="newRecipeForm">
-                    <input type="text" placeholder="Category"/>
-                    <input type="text" placeholder="Name"/>
-                    <h2>Ingredients</h2>
-                    <div class="ingredientsForm">
-                        <input type="text" />
-                        <select name="amount" id="ingredientsAmount">
-                            <option value="tsp">Tsp.</option>
-                        </select>
-                        <button onclick="addToRecipe()">Add</button>
-                        
-                    </div>
-                    <button id="newItem">New Item</button>
-                </form>
-            </div>
-            <div id="categories">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, labore quidem repudiandae molestias adipisci magni optio animi voluptates quibusdam eveniet error corrupti ducimus alias dolores iure ad! Quis, veniam ducimus excepturi doloremque, tenetur omnis delectus voluptatibus reiciendis ipsum rem asperiores ab assumenda voluptas vel! Obcaecati minus sequi repellat impedit facilis!
-            </div>
-        </div>
-        <div class="footer">
-            <p id="footer"></p>
-        </div>
-        <script src="js/index.js"></script>
-    </body>
+        <form id="newRecipeForm" class="newRecipeForm" method="post">
+          <input id="category" type="text" placeholder="Category" required />
+          <input id="name" type="text" placeholder="Name" required />
+          <h2>Ingredients</h2>
+          <div class="ingredientsForm">
+            <input id="amount" type="text" required />
+            <select name="amount" id="ingredientsAmount" required>
+              <option value="tsp">Tsp.</option>
+            </select>
+            <button id="addRecipeButton">Add</button>
+          </div>
+          <button type="submit">New Item</button>
+        </form>
+
+        <div id="currentList"></div>
+      </div>
+      <div id="categories">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium,
+        labore quidem repudiandae molestias adipisci magni optio animi
+        voluptates quibusdam eveniet error corrupti ducimus alias dolores iure
+        ad! Quis, veniam ducimus excepturi doloremque, tenetur omnis delectus
+        voluptatibus reiciendis ipsum rem asperiores ab assumenda voluptas vel!
+        Obcaecati minus sequi repellat impedit facilis!
+      </div>
+    </div>
+    <div class="footer">
+      <p id="footer"></p>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
 </html>
