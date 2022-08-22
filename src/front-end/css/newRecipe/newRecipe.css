@@ -1,6 +1,7 @@
+@import "components/ingredients.css";
 #newRecipe {
   display: none;
-  width: 80%;
+  width: 90%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;

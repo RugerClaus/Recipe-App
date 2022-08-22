@@ -105,6 +105,25 @@ const content = () => {
         newRecipe.style.display = 'none'
         categories.style.display = 'none'
     }
+    const addToRecipe = () => {
+        const newRecipeForm = document.querySelector('.newRecipeForm')
+        const ingredientsForm = document.getElementById('ingredientsForm')
+
+    }
+    const newItem = document.getElementById('newItem')
+    newItem.addEventListener('click', (e) => {
+        e.preventDefault()
+        
+        const input = document.createElement('input')
+        const select = document.createElement('select')
+        const button = document.createElement('button')
+        const ingredientsForm = document.getElementById('ingredientsForm')
+
+        let newItem = []
+        newItem.push([input,select,button])
+        ingredientsForm.append(newItem)
+        console.log(newItem)
+    })
 }
 
 const footer = () => {

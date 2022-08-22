@@ -1,0 +1,15 @@
+.ingredientsForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.ingredientsForm input {
+  grid-column: 1;
+  max-width: 100px;
+}
+.ingredientsForm select {
+  grid-column: 2;
+}
+.ingredientsForm button {
+  grid-column: 3;
+}/*# sourceMappingURL=ingredients.css.map */
