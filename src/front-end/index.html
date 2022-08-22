@@ -39,7 +39,16 @@
                 <form action="" class="newRecipeForm">
                     <input type="text" placeholder="Category"/>
                     <input type="text" placeholder="Name"/>
-                    <textarea name="ingredients" id="" cols="30" rows="10" placeholder="Ingredients"></textarea>
+                    <h2>Ingredients</h2>
+                    <div class="ingredientsForm">
+                        <input type="text" />
+                        <select name="amount" id="ingredientsAmount">
+                            <option value="tsp">Tsp.</option>
+                        </select>
+                        <button onclick="addToRecipe()">Add</button>
+                        
+                    </div>
+                    <button id="newItem">New Item</button>
                 </form>
             </div>
             <div id="categories">
