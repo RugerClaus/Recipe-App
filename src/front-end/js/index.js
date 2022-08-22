@@ -1,4 +1,8 @@
 const today = new Date()
+const home = document.getElementById('home')
+const newRecipe = document.getElementById('newRecipe')
+const categories = document.getElementById('categories')
+
 
 const header = () => {
 
@@ -60,18 +64,45 @@ const header = () => {
     const menu = () => {
         const menuButton = document.getElementById('navigation')
         const navigation = document.getElementById('navMenu')
-        menuButton.addEventListener('mouseover', () => {
+        menuButton.addEventListener('click', () => {
             navigation.style.display = "block"
         })
-        document.querySelector('.content').addEventListener('mouseover', () => {
+        document.querySelector('.content').addEventListener('click', () => {
             navigation.style.display = 'none'
         })
+        const buttons = document.querySelectorAll('.button')
+        const homeButton = document.getElementById('homeButton')
+        const newRecipeButton = document.getElementById('newRecipeButton')
+        const categoriesButton = document.getElementById('categoriesButton')
+        
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                if (button == homeButton){
+                    home.style.display = 'block'
+                    newRecipe.style.display = 'none'
+                    categories.style.display = 'none'
+                }
+                else if (button == newRecipeButton){
+                    newRecipe.style.display = 'block'
+                    home.style.display = 'none'
+                    categories.style.display = 'none'
+                }
+                else if (button == categoriesButton){
+                    categories.style.display = 'block'
+                    home.style.display = 'none'
+                    newRecipe.style.display = 'none'
+                }
+            })
+        })
+        
     }
     menu()
 }
 
 const content = () => {
-    
+    window.onload = () => {
+        const home = document.getElementById('home')
+    }
 }
 
 const footer = () => {

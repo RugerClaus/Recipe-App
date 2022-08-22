@@ -25,6 +25,11 @@ body #navMenu {
   position: absolute;
   right: 0px;
   top: 5rem;
+  font-size: 2rem;
+  z-index: 1000;
+}
+body #navMenu .button {
+  cursor: pointer;
 }
 body .header {
   width: 100%;
@@ -82,10 +87,35 @@ body .header #navigation {
 body .content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 85vh;
   width: 100vw;
   position: absolute;
   bottom: 1.5rem;
+}
+body .content #home {
+  display: block;
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+}
+body .content #newRecipe {
+  display: none;
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+}
+body .content #categories {
+  display: none;
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
 }
 body .footer {
   position: absolute;

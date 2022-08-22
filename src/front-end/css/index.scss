@@ -23,6 +23,12 @@ body {
         position: absolute;
         right: 0px;
         top: 5rem;
+        font-size: 2rem;
+        z-index: 1000;
+
+        .button {
+            cursor: pointer;
+        }
     }
 
     .header {
@@ -82,10 +88,36 @@ body {
     .content {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         height: 85vh;
         width: 100vw;
         position: absolute;
         bottom: 1.5rem;
+
+        #home {
+            display: block;
+            width: 80%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-self: center;
+        }
+        #newRecipe {
+            display: none;
+            width: 80%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-self: center;
+        }
+        #categories {
+            display: none;
+            width: 80%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-self: center;
+        }
     }
 
     .footer {
