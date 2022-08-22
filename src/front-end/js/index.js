@@ -123,17 +123,18 @@ const content = () => {
         }
         listOfRecipes.push(newRecipe)
 
-        //document.getElementById("currentList").innerHTML = JSON.stringify(listOfRecipes)
+        // document.getElementById("currentList").innerHTML = JSON.stringify(listOfRecipes)
 
         appendIngredient(newRecipe)
+        document.getElementById('newRecipeForm').reset()
     })
 
-    function appendIngredient(recipe) {
-        let lineBreak = document.createElement("br")
-        let listEntry = document.createElement("li")
+    const appendIngredient = (recipe) => {
+        const listEntry = document.createElement("li")
             .appendChild(document.createElement("ul"))
         listEntry.appendChild(document.createElement("li"))
             .appendChild(document.createTextNode("Category: " + recipe.category))
+            document.createElement('br')
         listEntry.appendChild(document.createElement("li"))
             .appendChild(document.createTextNode("Name: " + recipe.name))
         listEntry.appendChild(document.createElement("li"))
