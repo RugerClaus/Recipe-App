@@ -101,7 +101,9 @@ const header = () => {
 
 const content = () => {
     window.onload = () => {
-        const home = document.getElementById('home')
+        home.style.display = 'block'
+        newRecipe.style.display = 'none'
+        categories.style.display = 'none'
     }
 }
 
