@@ -111,29 +111,18 @@ const content = () => {
         const category = document.getElementById('category').value
         const name = document.getElementById('name').value
         const ingredientAmount = document.getElementById('amount').value
-        const ingredientsUnit = document.querySelectorAll('.ingredientsUnit')
-
+        const ingredientsUnits = document.getElementById('ingredientsUnit')
+        const value = ingredientsUnits.options[ingredientsUnits.selectedIndex].value
         
 
-        console.log(category, name, ingredientAmount, ingredientsUnit)
+        console.log(category, name, ingredientAmount, ingredientsUnits)
 
         const newRecipe = {
             category: category,
             name: name,
             ingredientAmount: ingredientAmount,
-            ingredientsUnit: ingredientsUnit
+            value: value
         }
-        ingredientsUnit.forEach((unit) => {
-
-            const mL = document.getElementById('mL')
-            const litres = document.getElementById('Litres')
-            if (unit.TEXT_NODE === mL){
-                newRecipe.ingredientsUnit = 'mL'
-            }
-            if (unit.TEXT_NODE === litres){
-                newRecipe.ingredientsUnit = 'L'
-            }
-        })
         listOfRecipes.push(newRecipe)
 
         // document.getElementById("currentList").innerHTML = JSON.stringify(listOfRecipes)
@@ -150,7 +139,7 @@ const content = () => {
         listEntry.appendChild(document.createElement("li"))
             .appendChild(document.createTextNode(`Name: ${recipe.name}`)) // implemented template literals to clean up the code a bit
         listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode(`Ingredients: ${recipe.ingredientAmount} ${toString(recipe.ingredientsUnit)}`)) // implemented template literals to clean up the code a bit
+            .appendChild(document.createTextNode(`Ingredients: ${recipe.ingredientAmount} ${recipe.value}`)) // implemented template literals to clean up the code a bit
         listEntry.appendChild(document.createElement("li"))
             .appendChild(document.createTextNode("--------------------------------"))
         document.getElementById("dynamicIngredientList").appendChild(listEntry)
