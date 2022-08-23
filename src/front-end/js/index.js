@@ -112,7 +112,7 @@ const content = () => {
         const name = document.getElementById('name').value
         const ingredientAmount = document.getElementById('amount').value
         const ingredientsUnits = document.getElementById('ingredientsUnit')
-        const value = ingredientsUnits.options[ingredientsUnits.selectedIndex].value
+        const unit = ingredientsUnits.options[ingredientsUnits.selectedIndex].value
         
 
         console.log(category, name, ingredientAmount, ingredientsUnits)
@@ -121,7 +121,7 @@ const content = () => {
             category: category,
             name: name,
             ingredientAmount: ingredientAmount,
-            value: value
+            unit: unit
         }
         listOfRecipes.push(newRecipe)
 
@@ -139,7 +139,7 @@ const content = () => {
         listEntry.appendChild(document.createElement("li"))
             .appendChild(document.createTextNode(`Name: ${recipe.name}`)) // implemented template literals to clean up the code a bit
         listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode(`Ingredients: ${recipe.ingredientAmount} ${recipe.value}`)) // implemented template literals to clean up the code a bit
+            .appendChild(document.createTextNode(`Ingredients: ${recipe.ingredientAmount} ${recipe.unit}`)) // implemented template literals to clean up the code a bit
         listEntry.appendChild(document.createElement("li"))
             .appendChild(document.createTextNode("--------------------------------"))
         document.getElementById("dynamicIngredientList").appendChild(listEntry)
