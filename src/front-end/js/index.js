@@ -111,8 +111,8 @@ const content = () => {
         const category = document.getElementById('category').value
         const name = document.getElementById('name').value
         const ingredientAmount = document.getElementById('amount').value
-        const ingredientsUnits = document.getElementById('ingredientsUnit')
-        const unit = ingredientsUnits.options[ingredientsUnits.selectedIndex].value
+        const ingredientsUnit = document.getElementById('ingredientsUnit')
+        const unit = ingredientsUnit.options[ingredientsUnit.selectedIndex].value // gets the value of the selected option
         
 
         console.log(category, name, ingredientAmount, ingredientsUnits)
@@ -121,7 +121,7 @@ const content = () => {
             category: category,
             name: name,
             ingredientAmount: ingredientAmount,
-            unit: unit
+            unit: unit // now shows selected option instead of an object
         }
         listOfRecipes.push(newRecipe)
 
