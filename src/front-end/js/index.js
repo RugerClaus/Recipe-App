@@ -3,40 +3,49 @@ const home = document.getElementById('home')
 const newRecipe = document.getElementById('newRecipe')
 const categories = document.getElementById('categories')
 const listOfRecipes = []
+const ingredientList = document.getElementById("dynamicIngredientList")
 
+
+const colors = {
+    sunday: () => {
+        ingredientList.style.border = '3px solid blue'
+        banner.style.backgroundColor = 'blue'
+        banner.style.color = 'White'
+    },
+    monday: () => {
+        ingredientList.style.border = '3px solid green'
+        banner.style.backgroundColor = 'white'
+        banner.style.color = 'black'
+    },
+    tuesday: () => {
+        ingredientList.style.border = '3px solid pink'
+        banner.style.backgroundColor = 'red'
+        banner.style.color = 'White'
+    },
+    wednesday: () => {
+        ingredientList.style.border = '3px solid red'
+        banner.style.backgroundColor = 'green'
+        banner.style.color = 'White'
+    },
+    thursday: () => {
+        ingredientList.style.border = '3px solid magenta'
+        banner.style.backgroundColor = 'black'
+        banner.style.color = 'White'
+    },
+    friday: () => {
+        ingredientList.style.border = '3px solid burgundy'
+        banner.style.backgroundColor = 'yellow'
+        banner.style.color = 'black'
+    },
+    saturday: () => {
+        banner.style.backgroundColor = 'lime-green'
+        banner.style.color = 'White'
+    }
+}
 
 const header = () => {
 
-    const colors = {
-        sunday: () => {
-            banner.style.backgroundColor = 'blue'
-            banner.style.color = 'White'
-        },
-        monday: () => {
-            banner.style.backgroundColor = 'white'
-            banner.style.color = 'black'
-        },
-        tuesday: () => {
-            banner.style.backgroundColor = 'red'
-            banner.style.color = 'White'
-        },
-        wednesday: () => {
-            banner.style.backgroundColor = 'green'
-            banner.style.color = 'White'
-        },
-        thursday: () => {
-            banner.style.backgroundColor = 'black'
-            banner.style.color = 'White'
-        },
-        friday: () => {
-            banner.style.backgroundColor = 'yellow'
-            banner.style.color = 'black'
-        },
-        saturday: () => {
-            banner.style.backgroundColor = 'purple'
-            banner.style.color = 'White'
-        }
-    }
+    
 
     const banner = document.getElementById('banner')
     switch (today.getDay()){
@@ -115,7 +124,7 @@ const content = () => {
         const unit = ingredientsUnit.options[ingredientsUnit.selectedIndex].value // gets the value of the selected option
         
 
-        console.log(category, name, ingredientAmount, ingredientsUnits)
+        console.log(category, name, ingredientAmount, ingredientsUnit, unit)
 
         const newRecipe = {
             category: category,
@@ -132,23 +141,42 @@ const content = () => {
     })
 
     const appendIngredient = (recipe) => {
-        const listEntry = document.createElement("li")
-            .appendChild(document.createElement("ul"))
-        listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode(`Category: ${recipe.category}`)) // implemented template literals to clean up the code a bit
-        listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode(`Name: ${recipe.name}`)) // implemented template literals to clean up the code a bit
-        listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode(`Ingredients: ${recipe.ingredientAmount} ${recipe.unit}`)) // implemented template literals to clean up the code a bit
-        listEntry.appendChild(document.createElement("li"))
-            .appendChild(document.createTextNode("--------------------------------"))
-        document.getElementById("dynamicIngredientList").appendChild(listEntry)
+        
+        const li1 = document.createElement("li")
+        li1.className = 'child1'
+        const li2 = document.createElement("li")
+        li2.className = 'child2'
+        const li3 = document.createElement("li")
+        li3.className = 'child3'
+        const li4 = document.createElement("li")
+        li4.className = 'child4'
+        const amountOutcome = document.createTextNode(`Amount: ${recipe.ingredientAmount} ${recipe.unit} \n`)
+        const nameOutcome = document.createTextNode(`Name: ${recipe.name}`)
+        const categoryOutcome = document.createTextNode(`Category: ${recipe.category}`)
+        const separator = document.createTextNode("--------------------------------")
+
+
+        const listEntry = document.createElement("ul")
+        listEntry.className = 'listEntries'
+        listEntry.appendChild(li1).appendChild(categoryOutcome) // implemented template literals to clean up the code a bit
+        listEntry.appendChild(li2).appendChild(nameOutcome) // implemented template literals to clean up the code a bit
+        listEntry.appendChild(li3).appendChild(amountOutcome) // implemented template literals to clean up the code a bit
+        listEntry.appendChild(li4).appendChild(separator)
+        ingredientList.appendChild(listEntry)
+
+        const recipeDisplay = document.getElementById('recipeDisplay')
+        const recipeItem = document.createTextNode(`${recipe.name} ${recipe.ingredientAmount} ${recipe.unit}`)
+
+        recipeDisplay.appendChild(recipeItem)
+
+        console.log(recipeItem)
     }
 }
 
 const footer = () => {
     const footer = document.getElementById('footer')
-    footer.innerHTML = `Copyright &copy; Recipays ${today.getFullYear()}`
+    const footerText = `Copyright &copy; Recipays ${today.getFullYear()}`
+    footer.innerHTML = `${footerText}`
 }
 
 header()

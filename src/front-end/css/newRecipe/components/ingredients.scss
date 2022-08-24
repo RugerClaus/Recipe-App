@@ -1,16 +1,13 @@
 .ingredientsForm {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 2rem;
 
     input {
         grid-column: 1;
-        max-width: 100px;
+        max-width: 50%;
     }
     select {
         grid-column: 2;
-    }
-    button {
-        grid-column: 3;
     }
 }

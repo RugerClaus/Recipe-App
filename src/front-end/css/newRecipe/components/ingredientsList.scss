@@ -1,0 +1,26 @@
+.ingredientsList {
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    ul {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-rows: auto;
+        .child1 {
+            grid-row: 1;
+        }
+        .child2 {
+            grid-row: 2;
+        }
+        .child3 {
+            grid-row: 3;
+        }
+    }
+}
