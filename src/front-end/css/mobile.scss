@@ -1,0 +1,64 @@
+@import "./newRecipe/componentsMobile/ingredients.css";
+@import "./newRecipe/componentsMobile/ingredientsList.css";
+
+@media(max-width: 400px) {
+    body {
+        height: 100vh;
+
+        #navMenu {
+            width: 40vw;
+            font-size: 4rem;
+            top: 200px;
+            position: fixed;
+        }
+
+        .header {
+            height: fit-content;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1rem;
+            top: 0;
+            position: fixed;
+            opacity: 10;
+            background-color: rgba(255,255,255,0);
+            z-index: 400;
+            margin-bottom: 0;
+            #banner {
+                font-size: 7rem;
+                height: 10vh;
+                align-items: center;
+                display: flex;
+                grid-column: 1;
+                
+            }
+            #facebook {
+                width: 5rem;
+                background-repeat: no-repeat;
+                height: 5rem;
+                grid-column: 2;
+                background-size: cover;
+            }
+            #instagram {
+                width: 5rem;
+                background-repeat: no-repeat;
+                height: 5rem;
+                grid-column: 3;
+                background-size: cover;
+            }
+            #navigation {
+                grid-column: 4;
+                width: 200px;
+                height: 200px;
+                background-size: contain;
+            }
+        }
+        .content {
+            font-size: 5rem;
+        }
+        .footer {
+            position: fixed;
+            font-size: 3rem;
+            background-color: black;
+            color: white;
+        }
+    }
+}

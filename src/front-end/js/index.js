@@ -38,6 +38,7 @@ const colors = {
         banner.style.color = 'black'
     },
     saturday: () => {
+        ingredientList.style.border = '3px solid orange'
         banner.style.backgroundColor = 'lime-green'
         banner.style.color = 'White'
     }
@@ -150,7 +151,7 @@ const content = () => {
         li3.className = 'child3'
         const li4 = document.createElement("li")
         li4.className = 'child4'
-        const amountOutcome = document.createTextNode(`Amount: ${recipe.ingredientAmount} ${recipe.unit} \n`)
+        const amountOutcome = document.createTextNode(`Amount: ${recipe.ingredientAmount} ${recipe.unit}`)
         const nameOutcome = document.createTextNode(`Name: ${recipe.name}`)
         const categoryOutcome = document.createTextNode(`Category: ${recipe.category}`)
         const separator = document.createTextNode("--------------------------------")
@@ -162,14 +163,7 @@ const content = () => {
         listEntry.appendChild(li2).appendChild(nameOutcome) // implemented template literals to clean up the code a bit
         listEntry.appendChild(li3).appendChild(amountOutcome) // implemented template literals to clean up the code a bit
         listEntry.appendChild(li4).appendChild(separator)
-        ingredientList.appendChild(listEntry)
-
-        const recipeDisplay = document.getElementById('recipeDisplay')
-        const recipeItem = document.createTextNode(`${recipe.name} ${recipe.ingredientAmount} ${recipe.unit}`)
-
-        recipeDisplay.appendChild(recipeItem)
-
-        console.log(recipeItem)
+        ingredientList.append(listEntry)
     }
 }
 

@@ -2,26 +2,26 @@
     border-radius: 10px;
     padding: 5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2rem;
 
-    .listEntries {
-        flex-direction: row;
+    ul {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-rows: auto;
         .child1 {
-            grid-column: 1;
+            grid-row: 1;
         }
         .child2 {
-            grid-column: 1;
+            grid-row: 2;
         }
         .child3 {
-            grid-column: 1;
-        }
-        .child4 {
-            grid-column: 1;
+            grid-row: 3;
         }
     }
 }

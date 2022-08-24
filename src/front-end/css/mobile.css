@@ -1,1 +1,62 @@
-/*# sourceMappingURL=mobile.css.map */
+@import "./newRecipe/componentsMobile/ingredients.css";
+@import "./newRecipe/componentsMobile/ingredientsList.css";
+@media (max-width: 400px) {
+  body {
+    height: 100vh;
+  }
+  body #navMenu {
+    width: 40vw;
+    font-size: 4rem;
+    top: 200px;
+    position: fixed;
+  }
+  body .header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    top: 0;
+    position: fixed;
+    opacity: 10;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 400;
+    margin-bottom: 0;
+  }
+  body .header #banner {
+    font-size: 7rem;
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    grid-column: 1;
+  }
+  body .header #facebook {
+    width: 5rem;
+    background-repeat: no-repeat;
+    height: 5rem;
+    grid-column: 2;
+    background-size: cover;
+  }
+  body .header #instagram {
+    width: 5rem;
+    background-repeat: no-repeat;
+    height: 5rem;
+    grid-column: 3;
+    background-size: cover;
+  }
+  body .header #navigation {
+    grid-column: 4;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+  }
+  body .content {
+    font-size: 5rem;
+  }
+  body .footer {
+    position: fixed;
+    font-size: 3rem;
+    background-color: black;
+    color: white;
+  }
+}/*# sourceMappingURL=mobile.css.map */

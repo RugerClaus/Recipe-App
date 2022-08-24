@@ -4,111 +4,116 @@
 @import "newRecipe/components/ingredients.css";
 @import "newRecipe/components/ingredientsList.css";
 
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: helvetica;
-    list-style-type: none;
-    text-decoration: none;
-}
+@media(min-width: 400px){
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-    #navMenu {
-        display: none;
-        height: fit-content;
-        width: 20vw;
-        background-color: gray;
-        border: 2px solid black;
-        position: absolute;
-        right: 0px;
-        top: 5rem;
-        font-size: 2rem;
-        z-index: 1000;
-
-        .button {
-            cursor: pointer;
-        }
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: helvetica;
+        list-style-type: none;
+        text-decoration: none;
     }
 
-    .header {
-        width: 100%;
-        height: fit-content;
-        position: fixed;
-        top: 0;
-        display: grid;
-        grid-template-columns: repeat(9,1fr);
-        grid-template-rows: repeat(1,1fr);
-        align-items: center;
-        justify-content: space-around;
-
-        #banner {
-            font-size: 4rem;
-            grid-column: 1;
-            grid-row: span 3;
-            box-shadow: black 5px 5px 5px 5px ;
-        }
-        #facebook {
-            width: 50px;
-            height: 50px;
-            background-image: url('../assets/Images/facebook.svg');
-            grid-column: 3;
-            grid-row: 1;
-            background-size: 50px 50px;
-            background-position: center;
-            color: black;
-            justify-self: center;
-        }
-        #instagram {
-            width: 50px;
-            height: 50px;
-            background-image: url('../assets/Images/instagram.svg');
-            grid-column: 4;
-            grid-row: 1;
-            background-size: contain;
-            background-position: center;
-            color: black;
-            justify-self: center;
-        }
-        #navigation {
-            width: 50px;
-            height: 50px;
-            background-image: url('../assets/Images/menu.svg');
-            grid-column: 9;
-            background-size: contain;
-            background-position: center;
-            background-origin: border-box;
-            background-repeat: no-repeat;
-            color: black;
-            justify-self: center;
-        }
-    }
-
-
-    .content {
+    body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 80vh;
-        width: 100vw;
-        position: absolute;
-        bottom: 1.5rem;
-    }
-
-    .footer {
-        position: absolute;
-        bottom: 0px;
-        background-color: rgba(0,0,0,0.5);
-        width: 100%;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        font-size: xx-large;
+        height: 100vh;
+
+        #navMenu {
+            display: none;
+            height: fit-content;
+            width: 20vw;
+            background-color: gray;
+            border: 2px solid black;
+            position: absolute;
+            right: 0px;
+            top: 5rem;
+            font-size: 2rem;
+            z-index: 1000;
+
+            .button {
+                cursor: pointer;
+            }
+        }
+
+        .header {
+            width: 100%;
+            height: fit-content;
+            position: fixed;
+            top: 0;
+            display: grid;
+            grid-template-columns: repeat(9,1fr);
+            grid-template-rows: repeat(1,1fr);
+            align-items: center;
+            justify-content: space-around;
+
+            #banner {
+                font-size: 4rem;
+                grid-column: 1;
+                grid-row: span 3;
+                box-shadow: black 5px 5px 5px 5px ;
+            }
+            #facebook {
+                width: 50px;
+                height: 50px;
+                background-image: url('../assets/Images/facebook.svg');
+                grid-column: 3;
+                grid-row: 1;
+                background-size: 50px 50px;
+                background-position: center;
+                color: black;
+                justify-self: center;
+            }
+            #instagram {
+                width: 50px;
+                height: 50px;
+                background-image: url('../assets/Images/instagram.svg');
+                grid-column: 4;
+                grid-row: 1;
+                background-size: contain;
+                background-position: center;
+                color: black;
+                justify-self: center;
+            }
+            #navigation {
+                width: 50px;
+                height: 50px;
+                background-image: url('../assets/Images/menu.svg');
+                grid-column: 9;
+                background-size: contain;
+                background-position: center;
+                background-origin: border-box;
+                background-repeat: no-repeat;
+                color: black;
+                justify-self: center;
+            }
+        }
+
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 80vh;
+            width: 100vw;
+            position: absolute;
+            bottom: 4rem;
+            overflow-y: scroll;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0px;
+            background-color: rgba(0,0,0,1);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: white;
+        }
     }
 }

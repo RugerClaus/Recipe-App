@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="A free and open source endeavour" />
+    
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/mobile.css" />
-    <link rel="stylesheet" href="css/newRecipe/newRecipe.css" />
     <title>Recipe App</title>
   </head>
   <body>
@@ -55,7 +55,7 @@
           <input id="category" type="text" placeholder="Category" required />
           <input id="name" type="text" placeholder="Name" required />
           <div class="ingredientsForm">
-            <input id="amount" type="text" required />
+            <input id="amount" type="text" placeholder="Amount" required />
             <select name="ingredientsUnit" id="ingredientsUnit" required>
               <option value="mL" class="unit ml">mL</option>
               <option value="L" class="unit litres">L</option>
@@ -66,8 +66,6 @@
         <h2>Ingredients</h2>
         <ul id="dynamicIngredientList" class="ingredientsList">
         </ul>
-
-        <div id="recipeDisplay"></div>
       </section>
       <section id="categories">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium,
