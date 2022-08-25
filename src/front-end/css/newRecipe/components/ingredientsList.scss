@@ -10,7 +10,9 @@
     margin-right: auto;
 
     .listEntries {
+        display: flow-root;
         flex-direction: row;
+        overflow: scroll;
         .child1 {
             grid-column: 1;
         }

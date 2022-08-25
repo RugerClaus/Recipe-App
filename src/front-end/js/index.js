@@ -116,6 +116,9 @@ const content = () => {
         newRecipe.style.display = 'none'
         categories.style.display = 'none'
     }
+
+
+    
     document.getElementById("newRecipeForm").addEventListener('submit', (e) => {
         e.preventDefault()
         const category = document.getElementById('category').value
@@ -140,7 +143,8 @@ const content = () => {
         appendIngredient(newRecipe)
         document.getElementById('newRecipeForm').reset()
     })
-
+    
+    let exists = false
     const appendIngredient = (recipe) => {
         
         const li1 = document.createElement("li")
@@ -159,12 +163,30 @@ const content = () => {
 
         const listEntry = document.createElement("ul")
         listEntry.className = 'listEntries'
-        listEntry.appendChild(li1).appendChild(categoryOutcome) // implemented template literals to clean up the code a bit
-        listEntry.appendChild(li2).appendChild(nameOutcome) // implemented template literals to clean up the code a bit
-        listEntry.appendChild(li3).appendChild(amountOutcome) // implemented template literals to clean up the code a bit
-        listEntry.appendChild(li4).appendChild(separator)
-        ingredientList.append(listEntry)
+        const outputs = { 
+            categoryOutput: listEntry.appendChild(li1).appendChild(categoryOutcome),
+            nameOutput: listEntry.appendChild(li2).appendChild(nameOutcome),
+            amountOutput: listEntry.appendChild(li3).appendChild(amountOutcome),
+            separatorOutput: listEntry.appendChild(li4).appendChild(separator),
+            appendListEntry: ingredientList.appendChild(listEntry)
+        }
+        
+        const box = document.createElement('div')
+        const box2 = document.createElement('div')
+        if(exists){
+            
+            box2.className = 'box2'
+            box2.childNodes = outputs
+            newRecipe.appendChild(box2).after(box)
+        } else {
+            
+            box.className = 'box'
+            box.childNodes = outputs
+            newRecipe.appendChild(box).appendChild(outputs.appendListEntry)
+        }
+        
     }
+    exists = true
 }
 
 const footer = () => {

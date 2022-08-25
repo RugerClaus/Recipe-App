@@ -12,7 +12,9 @@
   margin-right: auto;
 }
 .ingredientsList .listEntries {
+  display: flow-root;
   flex-direction: row;
+  overflow: scroll;
 }
 .ingredientsList .listEntries .child1 {
   grid-column: 1;

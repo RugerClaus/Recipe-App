@@ -24,4 +24,13 @@
 }
 #newRecipe .newRecipeForm textarea {
   font-size: 2rem;
+}
+#newRecipe .box {
+  display: block;
+}
+#newRecipe .box2 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
 }/*# sourceMappingURL=newRecipe.css.map */
