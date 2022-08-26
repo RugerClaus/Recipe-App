@@ -1,3 +1,5 @@
+import IngredientList from "./IngredientList"
+
 const today = new Date()
 const home = document.getElementById('home')
 const newRecipe = document.getElementById('newRecipe')
@@ -175,9 +177,7 @@ const content = () => {
         const box2 = document.createElement('div')
         if(exists){
             
-            box2.className = 'box2'
-            box2.childNodes = outputs
-            newRecipe.appendChild(box2).after(box)
+            const whatever = new outputs
         } else {
             
             box.className = 'box'
