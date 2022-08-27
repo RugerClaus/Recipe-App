@@ -1,4 +1,4 @@
-import IngredientList from "./IngredientList"
+
 
 const today = new Date()
 const home = document.getElementById('home')

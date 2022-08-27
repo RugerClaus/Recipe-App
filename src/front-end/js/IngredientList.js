@@ -1,5 +1,5 @@
 import newItem from "./SetItem"
-
+import Ingredient from "./Ingredient"
 
 export default class IngredientList {
     constructor(name) {
@@ -13,7 +13,9 @@ export default class IngredientList {
             id: rawRecipeList.id,
             title: rawRecipeList.title
         })
-        rawRecipeList.ingredients.forEach((ingredient) )
+        rawRecipeList.ingredients.forEach((ingredient) =>  ingredient.addRecipeItem())
     }
-    
+    addRecipeItem() {
+
+    }
 }
